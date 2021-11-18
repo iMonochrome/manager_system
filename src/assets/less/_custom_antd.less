@@ -1,0 +1,207 @@
+.ant-btn {
+  border-radius: 7px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+// Layout
+.ant-layout-content {
+  background: @white;
+  max-height: calc(100vh - 104px);
+  height: calc(100vh - 104px);
+  overflow-y: scroll;
+  position: relative;
+  padding: 24px;
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 100%;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: @primary-color;
+    border-radius: 4px;
+  }
+}
+.ant-layout-footer {
+  height: 40px;
+  padding: 0px 24px;
+  font-size: 12px;
+}
+
+.ant-layout-sider-children {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+.ant-layout-header {
+  background: rgba(@primary-color, 0.02);
+  border-bottom: 1px solid @primary-color;
+  box-shadow: 0px 1px 2px @primary-color;
+  z-index: 3;
+}
+
+.ant-message {
+  transition: all 1s ease;
+}
+
+.ant-message-notice {
+  padding: 8px 0px !important;
+}
+
+.ant-message-notice-content {
+  border-radius: 5px;
+  width: calc(100vw - 20px);
+  padding: 0;
+  height: 45px;
+
+  .ant-message-custom-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+    .anticon {
+      display: none;
+    }
+  }
+
+  .ant-message-error {
+    background: @error-color;
+  }
+  .ant-message-success {
+    background: @success-color;
+  }
+  .ant-message-warning {
+    background: @warning-color;
+  }
+  .ant-message-info {
+    background: @info-color;
+  }
+}
+
+.ant-form-item-label label {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #2d2d2d;
+}
+
+.ant-input[disabled] {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.ant-menu-dark .ant-menu-item:hover,
+.ant-menu-dark .ant-menu-item-active,
+.ant-menu-dark .ant-menu-submenu-active,
+.ant-menu-dark .ant-menu-submenu-open,
+.ant-menu-dark .ant-menu-submenu-selected,
+.ant-menu-dark .ant-menu-submenu-title:hover,
+.ant-menu-vertical .ant-menu-submenu,
+.ant-menu-vertical-left .ant-menu-submenu,
+.ant-menu-vertical-right .ant-menu-submenu,
+.ant-menu-inline .ant-menu-submenu {
+  width: 100%;
+}
+
+// .ant-menu-submenu-title:hover {
+//   background-color: #00c368 !important;
+// }
+
+.ant-layout {
+  background-color: rgba(@primary-color, 0.2);
+}
+
+.ant-input {
+  &.input_disabled {
+    border: none;
+    pointer-events: none;
+  }
+  &.input_editing {
+    border: 1px solid #d9d9d9;
+    pointer-events: all;
+  }
+}
+.ant-avatar {
+  cursor: pointer;
+}
+.notification_item {
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px 25px 10px 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.8;
+  .notification_icon {
+    font-size: 30px;
+    margin: 0px 10px;
+  }
+  .notification_content {
+    width: 100%;
+  }
+
+  &.SUCCESS {
+    background-color: rgba(@success-color, 0.2);
+    border: 1px solid rgba(@success-color, 0.5);
+    box-shadow: 0px 2px 4px rgba(@success-color, 0.5);
+    border-left: 8px solid @success-color;
+  }
+  &.error {
+    background-color: rgba(@error-color, 0.2);
+    border: 1px solid rgba(@error-color, 0.5);
+    box-shadow: 0px 2px 4px rgba(@error-color, 0.5);;
+    border-left: 8px solid @error-color;
+  }
+  &.warning {
+    background-color: rgba(@warning-color, 0.2);
+    border: 1px solid rgba(@warning-color, 0.5);
+    box-shadow: 0px 2px 4px rgba(@warning-color, 0.5);
+    border-left: 8px solid @warning-color;
+  }
+  &.INFOMATION,
+  &.PROCESS {
+    background-color: rgba(@info-color, 0.2);
+    border: 1px solid rgba(@info-color, 0.5);
+    box-shadow: 0px 2px 4px rgba(@info-color, 0.5);
+    border-left: 8px solid @info-color;
+  }
+  .notification_name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  small {
+    text-align: right;
+    width: 100%;
+    display: block;
+    font-style: italic;
+    padding-right: 10px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+  &.unread {
+    opacity: 1;
+  }
+  &.unread:after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: @info-color;
+    right: 5px;
+    top: 5px;
+  }
+}
+

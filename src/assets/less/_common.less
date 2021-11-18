@@ -1,0 +1,50 @@
+.sider {
+  &__logo {
+    font-size: 20px;
+    height: 64px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .ant-menu-item {
+    padding: 0px !important ;
+    width: 100%;
+    height: 50px;
+    .ant-btn {
+      height: 45px;
+      opacity: 0.7;
+      border: 0;
+      text-transform: uppercase;
+      font-weight: 500;
+      &:hover {
+        opacity: 1;
+        background-color: #fafafa;
+        color: @primary-color;
+      }
+    }
+
+    &.ant-menu-item-selected {
+      .ant-btn {
+        opacity: 1;
+        background-color: #fafafa;
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+.error-page {
+  height: 100%;
+}
+
+.app_loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 40px;
+  background: #33333333;
+  color: @primary-color;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
